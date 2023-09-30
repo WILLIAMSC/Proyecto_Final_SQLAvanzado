@@ -1,0 +1,2 @@
+CREATE OR REPLACE FUNCTION `keepcoding.cleaner`(input INT64)
+RETURNS INT64 AS (IFNULL (input,-999999));
