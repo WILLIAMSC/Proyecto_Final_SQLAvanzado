@@ -29,5 +29,5 @@ SELECT
   , s.billing_account_id AS billing_account_id
 FROM 
   keepcoding.ivr_calls c
-  JOIN `keepcoding.ivr_modules` m ON c.ivr_id = m.ivr_id
-  JOIN `keepcoding.ivr_steps` s ON m.ivr_id = s.ivr_id AND m.module_sequece = s.module_sequece;
+  LEFT JOIN `keepcoding.ivr_modules` m ON c.ivr_id = m.ivr_id
+  LEFT JOIN `keepcoding.ivr_steps` s ON m.ivr_id = s.ivr_id AND m.module_sequece = s.module_sequece;
